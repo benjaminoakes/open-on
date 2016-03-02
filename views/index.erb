@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Open on...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <h1>Open on...</h1>
+
+    <p>Share a URL to any device with a web browser.</p>
+
+    <ul>
+      <li>Bookmark: <a href="<%= url_prefix %>/redirect?secret=<%= secret %>">Open from Device</a></li>
+      <li>Bookmarklet: <a href="javascript:(function(){var%20i=document.createElement('img');i.src='<%= url_prefix %>/store?secret=<%= secret %>&amp;url='+document.location.href;}());">Open on Device</a></li>
+    </ul>
+
+    <fieldset>
+      <legend>Manual entry</legend>
+
+      <form method="post" action="/store?secret=<%= secret %>">
+        <input name="url" type="url" placeholder="http://example.com" required>
+        <input name="submit" type="submit" value="Open on Device">
+      </form>
+    </fieldset>
+  </body>
+</html>
