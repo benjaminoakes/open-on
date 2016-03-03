@@ -1,4 +1,7 @@
 require 'rubygems'
+require 'dotenv'
+Dotenv.load
+
 require 'json'
 require 'sinatra'
 require 'sinatra/base'
@@ -34,10 +37,10 @@ class OpenOn < Sinatra::Base
   private
 
   def config
-    @config ||= begin
-                  raw = File.read('config.json')
-                  JSON.parse(raw)
-                end
+    {
+      'secret'     => ENV['OPEN_ON_SECRET'],
+      'url_prefix' => ENV['OPEN_ON_URL_PREFIX'],
+    }
   end
 
   def if_allowed(params)
