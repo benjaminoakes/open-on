@@ -14,10 +14,17 @@ NOTE: opening a URL from another device is always done manually, but in my exper
 
 ## Installation
 
+### Heroku
+
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
+### Other hosts
 
 * Unpack this app on a Ruby-enabled web host.
 * Write a `.env` file.  Look at `.env.sample` for an example.
+
+### Bookmarks
+
 * Install your bookmark and bookmarklet.  Typically this is done via drag-and-drop, but it may vary base on your system (especially on mobile).
 * Run the "Open on Device" bookmarklet on one device and then "Open from Device" on another.  (You have to do "Open on Device" at least once to start off.)  
 
