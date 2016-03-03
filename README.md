@@ -10,14 +10,14 @@ I originally wrote this for my Kindle (2010), which made transferring web conten
 * **Simple authentication.**  Single user.  Set it up once on each device and forget about it.
 * **Dead simple.**  About 40 lines of Ruby and a line of JavaScript.
 
-## How to
+NOTE: opening a URL from another device is always done manually, but in my experience, that means it's more reliable.
+
+## Installation
 
 * Unpack this app on a Ruby-enabled web host.
-* Write a `config.json` file.  Look at `config.example.json` for an example.
+* Write a `.env` file.  Look at `.env.sample` for an example.
 * Install your bookmark and bookmarklet.  Typically this is done via drag-and-drop, but it may vary base on your system (especially on mobile).
 * Run the "Open on Device" bookmarklet on one device and then "Open from Device" on another.  (You have to do "Open on Device" at least once to start off.)  
-
-NOTE: opening a URL from another device is always done manually, but in my experience, that means it's more reliable.
 
 ## Tips
 
